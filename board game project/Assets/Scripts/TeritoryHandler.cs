@@ -10,23 +10,20 @@ public class TeritoryHandler : MonoBehaviour
     private SpriteRenderer sprite;
     
     public Color32 oldColor;
-    //public Color32 startColor;
     public Color32 hoverColor;
 
     void Awake() {
         sprite=GetComponent<SpriteRenderer>();
-        //sprite.color=startColor;
     }
 
     void OnMouseEnter() {
         oldColor=sprite.color;
-        //sprite.color=hoverColor;
-        //HoverTintColor();
-        sprite.color=HoverTintColor.hoverColor();
+        sprite.color=hoverColor;
     }
 
     void OnMouseUpAsButton() {
-        print("Pressed");
+        //print("Pressed");
+        ShowGUI();
     }
 
     void OnMouseExit() {
@@ -44,6 +41,10 @@ public class TeritoryHandler : MonoBehaviour
 
     public void HoverTintColor(Color32 color){
         hoverColor = color;
-        //sprite.color = color;
+    }
+
+    void ShowGUI()
+    {
+        TeritoryManager.instance.ShowAttackPanel(teritory.description, teritory.woodReward, teritory.stoneReward, teritory.goldReward);
     }
 }

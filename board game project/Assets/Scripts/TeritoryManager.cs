@@ -6,8 +6,9 @@ public class TeritoryManager : MonoBehaviour
 {
     public static TeritoryManager instance;
 
-    public List<GameObject> teritoryList = new List<GameObject>();
     public GameObject attackPanel;
+    
+    public List<GameObject> teritoryList = new List<GameObject>();
 
     void Awake()
     {
@@ -88,15 +89,18 @@ public class TeritoryManager : MonoBehaviour
         }
     }
 
-    public void ShowAttackPanel(string description, int moneyReward, int experienceReward){
+    public void ShowAttackPanel(string description, int woodReward, int stoneReward, int goldReward)
+    {
         attackPanel.SetActive(true);
         AttackPanel gui = attackPanel.GetComponent<AttackPanel>();
         gui.descriptionText.text = description;
-        gui.moneyRewardText.text = moneyReward.ToString();
-        gui.experienceRewardText.text = experienceReward.ToString();
+        gui.woodRewardText.text = woodReward.ToString();
+        gui.stoneRewardText.text = stoneReward.ToString();
+        gui.goldRewardText.text = goldReward.ToString();
     }
 
-    public void HideAttackPanel(){
+    public void HideAttackPanel()
+    {
         attackPanel.SetActive(false);
     }
 }

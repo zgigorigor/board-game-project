@@ -16,7 +16,9 @@ public class Teritory
     }
 
     public tribes tribe;
-    public int moneyReward;
-    public int experienceReward;
-
+    [TextArea(15,20)]
+    public string description;
+    public int woodReward;
+    public int stoneReward;
+    public int goldReward;
 }

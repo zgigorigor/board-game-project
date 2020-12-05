@@ -224,12 +224,6 @@ MonoBehaviour:
     woodReward: 60
     stoneReward: 20
     goldReward: 20
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &37486850
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -381,12 +375,6 @@ MonoBehaviour:
     woodReward: 60
     stoneReward: 20
     goldReward: 20
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &38553296
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -533,12 +521,6 @@ MonoBehaviour:
     woodReward: 20
     stoneReward: 60
     goldReward: 20
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &90916342
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -822,12 +804,6 @@ MonoBehaviour:
     woodReward: 60
     stoneReward: 20
     goldReward: 20
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &129285466
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -944,7 +920,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 0231431a40d99114482fd56dc2d65969, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1221,12 +1197,6 @@ MonoBehaviour:
     woodReward: 20
     stoneReward: 20
     goldReward: 60
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &453460550
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1277,6 +1247,36 @@ PolygonCollider2D:
       - {x: 22.5, y: -84.5}
       - {x: 32.5, y: -72.5}
       - {x: 64.5, y: -32.5}
+--- !u!1 &457932769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 457932770}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &457932770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457932769}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.1288595, y: 0.73302317, z: -0.18896484}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,12 +1463,6 @@ MonoBehaviour:
     woodReward: 20
     stoneReward: 20
     goldReward: 60
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &638860322
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1583,7 +1577,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 2bdf37243694a8149a17762a74bb7a4b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2098,12 +2092,6 @@ MonoBehaviour:
     woodReward: 20
     stoneReward: 20
     goldReward: 60
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &1093364888
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2314,7 +2302,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 39fdb8da3ab36344ea479459f27249a8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2546,12 +2534,6 @@ MonoBehaviour:
     woodReward: 20
     stoneReward: 60
     goldReward: 20
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &1239424935
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2706,17 +2688,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teritory:
     name: teritory_05
-    tribe: 2
+    tribe: 3
     description: 
     woodReward: 20
     stoneReward: 20
     goldReward: 60
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &1304108953
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3035,12 +3011,6 @@ MonoBehaviour:
     woodReward: 20
     stoneReward: 20
     goldReward: 60
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &1421944451
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3194,12 +3164,6 @@ MonoBehaviour:
     woodReward: 20
     stoneReward: 60
     goldReward: 20
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &1481881005
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3352,12 +3316,6 @@ MonoBehaviour:
     woodReward: 20
     stoneReward: 20
     goldReward: 60
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &1486196151
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3805,12 +3763,6 @@ MonoBehaviour:
     woodReward: 20
     stoneReward: 60
     goldReward: 20
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &1804947279
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4047,12 +3999,6 @@ MonoBehaviour:
     woodReward: 20
     stoneReward: 20
     goldReward: 60
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &1830688135
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4235,12 +4181,6 @@ MonoBehaviour:
     woodReward: 20
     stoneReward: 60
     goldReward: 20
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &1936953081
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4572,12 +4512,6 @@ MonoBehaviour:
     woodReward: 20
     stoneReward: 20
     goldReward: 60
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &1997987262
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4748,12 +4682,6 @@ MonoBehaviour:
     woodReward: 20
     stoneReward: 60
     goldReward: 20
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &2007523125
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4908,12 +4836,6 @@ MonoBehaviour:
     woodReward: 20
     stoneReward: 60
     goldReward: 20
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &2017924798
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5177,12 +5099,6 @@ MonoBehaviour:
     woodReward: 60
     stoneReward: 20
     goldReward: 20
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &2070186673
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5341,12 +5257,6 @@ MonoBehaviour:
     woodReward: 20
     stoneReward: 60
     goldReward: 20
-  oldColor:
-    serializedVersion: 2
-    rgba: 0
-  hoverColor:
-    serializedVersion: 2
-    rgba: 0
 --- !u!60 &2075502409
 PolygonCollider2D:
   m_ObjectHideFlags: 0

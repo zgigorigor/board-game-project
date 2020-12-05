@@ -6,9 +6,6 @@ using TMPro;
 public class AttackPanel : MonoBehaviour
 {
     public TextMeshProUGUI descriptionText;
-    //public TextMeshProUGUI moneyRewardText;
-    //public TextMeshProUGUI experienceRewardText;
-
     public TextMeshProUGUI woodRewardText;
     public TextMeshProUGUI stoneRewardText;
     public TextMeshProUGUI goldRewardText;

@@ -8,43 +8,61 @@ public class TeritoryHandler : MonoBehaviour
 {
     public Teritory teritory;
     private SpriteRenderer sprite;
-    
-    public Color32 oldColor;
-    public Color32 hoverColor;
 
-    void Awake() {
-        sprite=GetComponent<SpriteRenderer>();
+    private Color32 oldColor;
+    private Color32 hoverColor;
+
+    void Awake()
+    {
+        sprite = GetComponent<SpriteRenderer>();
     }
 
-    void OnMouseEnter() {
-        oldColor=sprite.color;
-        sprite.color=hoverColor;
+    void OnMouseEnter()
+    {
+        oldColor = sprite.color;
+        if (teritory.tribe == Teritory.tribes.PLAYER) 
+        {
+            hoverColor = oldColor;
+        }
+        else
+        {
+            hoverColor = new Color32(oldColor.r, oldColor.g, oldColor.b, 255);
+        }
+        sprite.color = hoverColor;
     }
 
-    void OnMouseUpAsButton() {
+    void OnMouseUpAsButton()
+    {
         //print("Pressed");
-        ShowGUI();
+        if (teritory.tribe != Teritory.tribes.PLAYER)
+        {
+            ShowGUI();
+        }
     }
 
-    void OnMouseExit() {
-        sprite.color=oldColor;
+    void OnMouseExit()
+    {
+        sprite.color = oldColor;
     }
 
-    void OnDrawGizmos() {
-        teritory.name = name;  
-        this.tag = "Teritory";  
+    void OnDrawGizmos()
+    {
+        teritory.name = name;
+        this.tag = "Teritory";
     }
 
-    public void TintColor(Color32 color){
-        sprite.color=color;
+    public void TintColor(Color32 color)
+    {
+        sprite.color = color;
     }
 
-    public void HoverTintColor(Color32 color){
-        hoverColor = color;
-    }
+    //public void HoverTintColor(Color32 color){
+    //    hoverColor = color;
+    //}
 
     void ShowGUI()
     {
-        TeritoryManager.instance.ShowAttackPanel(teritory.description, teritory.woodReward, teritory.stoneReward, teritory.goldReward);
+        //TeritoryManager.instance.ShowAttackPanel(teritory.description, teritory.woodReward, teritory.stoneReward, teritory.goldReward);
+        TeritoryManager.instance.ShowAttackPanel("This teritory is owned by the " + teritory.tribe.ToString() + " tribe. Are you sure you want to attack them?", teritory.woodReward, teritory.stoneReward, teritory.goldReward);
     }
 }

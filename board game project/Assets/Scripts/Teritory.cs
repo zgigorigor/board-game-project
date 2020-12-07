@@ -16,7 +16,8 @@ public class Teritory
     }
 
     public tribes tribe;
-    [TextArea(15,20)]
+
+    [TextArea(15, 20)]
     public string description;
     public int woodReward;
     public int stoneReward;

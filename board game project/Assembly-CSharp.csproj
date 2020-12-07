@@ -39,6 +39,8 @@
      <Compile Include="Assets\Scripts\AttackPanel.cs" />
      <Compile Include="Assets\Scripts\FightSimulator.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\SaveSystem.cs" />
+     <Compile Include="Assets\Scripts\ScorePanel.cs" />
      <Compile Include="Assets\Scripts\Teritory.cs" />
      <Compile Include="Assets\Scripts\TeritoryHandler.cs" />
      <Compile Include="Assets\Scripts\TeritoryManager.cs" />

@@ -9,6 +9,7 @@ public class TeritoryManager : MonoBehaviour
     public static TeritoryManager instance;
 
     public GameObject attackPanel;
+    public GameObject scorePanel;
 
     public List<GameObject> teritoryList = new List<GameObject>();
 
@@ -20,6 +21,7 @@ public class TeritoryManager : MonoBehaviour
     void Start()
     {
         attackPanel.SetActive(false);
+        scorePanel.SetActive(true);
 
         AddTeritoryData();
 
@@ -110,17 +112,34 @@ public class TeritoryManager : MonoBehaviour
 
     public void ShowAttackPanel(string description, int woodReward, int stoneReward, int goldReward)
     {
+        scorePanel.SetActive(false);
         attackPanel.SetActive(true);
-        AttackPanel gui = attackPanel.GetComponent<AttackPanel>();
-        gui.descriptionText.text = description;
-        gui.woodRewardText.text = "+ " + woodReward.ToString();
-        gui.stoneRewardText.text = "+ " + stoneReward.ToString();
-        gui.goldRewardText.text = "+ " + goldReward.ToString();
+        AttackPanel attackGui = attackPanel.GetComponent<AttackPanel>();
+        attackGui.descriptionText.text = description;
+        attackGui.woodRewardText.text = "+ " + woodReward.ToString();
+        attackGui.stoneRewardText.text = "+ " + stoneReward.ToString();
+        attackGui.goldRewardText.text = "+ " + goldReward.ToString();
     }
 
     public void HideAttackPanel()
     {
         attackPanel.SetActive(false);
+        scorePanel.SetActive(true);
+    }
+
+    public void ShowScorePanel(int woodAmount, int stoneAmount, int goldAmount, int turn)
+    {
+        scorePanel.SetActive(true);
+        ScorePanel scoreGui = scorePanel.GetComponent<ScorePanel>();
+        scoreGui.woodAmount.text = woodAmount.ToString();
+        scoreGui.stoneAmount.text = stoneAmount.ToString();
+        scoreGui.goldAmount.text = goldAmount.ToString();
+        scoreGui.turn.text = "Turn: " + turn.ToString();
+    }
+
+    public void HideScorePanel()
+    {
+        scorePanel.SetActive(false);
     }
 
     public void StartFight()
@@ -129,5 +148,6 @@ public class TeritoryManager : MonoBehaviour
         SceneManager.LoadScene("Battle");
     }
 
-
+    public void DeleteGame()
+    { }
 }

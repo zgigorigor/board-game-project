@@ -12,6 +12,11 @@ public class TeritoryHandler : MonoBehaviour
     private Color32 oldColor;
     private Color32 hoverColor;
 
+    private string defaultDescriptionText;
+    private int defaultWoodAmount;
+    private int defaultStoneAmount;
+    private int defaultGoldAmount;
+
     void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
@@ -59,6 +64,14 @@ public class TeritoryHandler : MonoBehaviour
     //public void HoverTintColor(Color32 color){
     //    hoverColor = color;
     //}
+
+    public void TribeDetails(string defaultDescription, int defaultWood, int defaultStone, int defaultGold)
+    {
+        defaultDescriptionText = defaultDescription;
+        defaultWoodAmount = defaultWood;
+        defaultStoneAmount = defaultStone;
+        defaultGoldAmount = defaultGold;
+    }
 
     void ShowGUI()
     {

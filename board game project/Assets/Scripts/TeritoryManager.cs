@@ -10,6 +10,7 @@ public class TeritoryManager : MonoBehaviour
 
     public GameObject attackPanel;
     public GameObject scorePanel;
+    public GameObject pauseMenuGUI;
 
     public List<GameObject> teritoryList = new List<GameObject>();
 
@@ -50,6 +51,7 @@ public class TeritoryManager : MonoBehaviour
         GameManager.instance.Loading();
 
         TintTeritory();
+        TeritoryDetails();
         //HoverTintTeritory();
     }
 
@@ -110,6 +112,29 @@ public class TeritoryManager : MonoBehaviour
     //    }
     //}
 
+    public void TeritoryDetails()
+    {
+        for (int i = 0; i < teritoryList.Count; i++)
+        {
+            TeritoryHandler teritoryHandler = teritoryList[i].GetComponent<TeritoryHandler>();
+
+            if (teritoryHandler.teritory.tribe == Teritory.tribes.ECONOMY)
+            {
+                teritoryHandler.TribeDetails("Great coin keepers since ancient times.", 20, 20, 60);
+            }
+
+            if (teritoryHandler.teritory.tribe == Teritory.tribes.SCIENCE)
+            {
+                teritoryHandler.TribeDetails("Never ending thirst for knowledge.", 60, 20, 20);
+            }
+
+            if (teritoryHandler.teritory.tribe == Teritory.tribes.WARRIOR)
+            {
+                teritoryHandler.TribeDetails("Discipline and courage is what makes Warrior tribe stand out.", 20, 60, 20);
+            }
+        }
+    }
+
     public void ShowAttackPanel(string description, int woodReward, int stoneReward, int goldReward)
     {
         scorePanel.SetActive(false);
@@ -142,6 +167,16 @@ public class TeritoryManager : MonoBehaviour
         scorePanel.SetActive(false);
     }
 
+    public void ShowPauseMenu()
+    {
+        pauseMenuGUI.SetActive(true);
+    }
+
+    public void HidePauseMenu()
+    {
+        pauseMenuGUI.SetActive(false);
+    }
+
     public void StartFight()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -149,5 +184,7 @@ public class TeritoryManager : MonoBehaviour
     }
 
     public void DeleteGame()
-    { }
+    {
+        GameManager.instance.DeleteSavedFile();
+    }
 }

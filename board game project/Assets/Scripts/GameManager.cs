@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
 
         BinaryFormatter bf = new BinaryFormatter();
         //FileStream stream = new FileStream(Application.persistentDataPath + "/SaveFile.iggy", FileMode.Create);
-        FileStream stream = new FileStream("./Saved Games/SaveFile.igf", FileMode.Create);
+        FileStream stream = new FileStream("./Saved Games/SaveFile.iggygamefile", FileMode.Create);
         bf.Serialize(stream, data);
         stream.Close();
         print("Saved game.");
@@ -64,11 +64,11 @@ public class GameManager : MonoBehaviour
     public void Loading()
     {
         //if (File.Exists(Application.persistentDataPath + "/SaveFile.iggy"))
-        if (File.Exists("./Saved Games/SaveFile.igf"))
+        if (File.Exists("./Saved Games/SaveFile.iggygamefile"))
         {
             BinaryFormatter bf = new BinaryFormatter();
             //FileStream stream = new FileStream(Application.persistentDataPath + "/SaveFile.iggy", FileMode.Open);
-            FileStream stream = new FileStream("./Saved Games/SaveFile.igf", FileMode.Open);
+            FileStream stream = new FileStream("./Saved Games/SaveFile.iggygamefile", FileMode.Open);
 
             SaveData data = (SaveData)bf.Deserialize(stream);
             stream.Close();
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
             {
                 for (int j = 0; j < TeritoryManager.instance.teritoryList.Count; j++)
                 {
-                    if (data.savedTeritories[i].name == TeritoryManager.instance.teritoryList[j].GetComponent<TeritoryHandler>().teritory.name) ;
+                    if (data.savedTeritories[i].name == TeritoryManager.instance.teritoryList[j].GetComponent<TeritoryHandler>().teritory.name)
                     {
                         TeritoryManager.instance.teritoryList[j].GetComponent<TeritoryHandler>().teritory = data.savedTeritories[i];
                     }
@@ -100,10 +100,10 @@ public class GameManager : MonoBehaviour
     public void DeleteSavedFile()
     {
         //if (File.Exists(Application.persistentDataPath + "/SaveFile.iggy"))
-        if (File.Exists("./Saved Games/SaveFile.igf"))
+        if (File.Exists("./Saved Games/SaveFile.iggygamefile"))
         {
             //File.Delete(Application.persistentDataPath + "/SaveFile.iggy");
-            File.Delete("./Saved Games/SaveFile.igf");
+            File.Delete("./Saved Games/SaveFile.iggygamefile");
             print("SaveFile deleted");
             //RESTART GAME
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

@@ -20,7 +20,7 @@ public class TeritoryHandler : MonoBehaviour
     void OnMouseEnter()
     {
         oldColor = sprite.color;
-        if (teritory.tribe == Teritory.tribes.PLAYER) 
+        if (teritory.tribe == Teritory.tribes.PLAYER)
         {
             hoverColor = oldColor;
         }
@@ -64,5 +64,8 @@ public class TeritoryHandler : MonoBehaviour
     {
         //TeritoryManager.instance.ShowAttackPanel(teritory.description, teritory.woodReward, teritory.stoneReward, teritory.goldReward);
         TeritoryManager.instance.ShowAttackPanel("This teritory is owned by the " + teritory.tribe.ToString() + " tribe. Are you sure you want to attack them?", teritory.woodReward, teritory.stoneReward, teritory.goldReward);
+        GameManager.instance.attackedTeritory = teritory.name;
+        GameManager.instance.battleHasEnded = false;
+        GameManager.instance.battleWon = false;
     }
 }

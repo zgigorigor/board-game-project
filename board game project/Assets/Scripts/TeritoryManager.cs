@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
 public class TeritoryManager : MonoBehaviour
 {
     public static TeritoryManager instance;
@@ -120,4 +122,12 @@ public class TeritoryManager : MonoBehaviour
     {
         attackPanel.SetActive(false);
     }
+
+    public void StartFight()
+    {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Battle");
+    }
+
+
 }

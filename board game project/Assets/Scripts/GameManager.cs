@@ -54,7 +54,8 @@ public class GameManager : MonoBehaviour
         data.cur_gold = gold;
 
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream stream = new FileStream(Application.persistentDataPath + "/SaveFile.dat", FileMode.Create);
+        //FileStream stream = new FileStream(Application.persistentDataPath + "/SaveFile.iggy", FileMode.Create);
+        FileStream stream = new FileStream("./Saved Games/SaveFile.igf", FileMode.Create);
         bf.Serialize(stream, data);
         stream.Close();
         print("Saved game.");
@@ -62,10 +63,12 @@ public class GameManager : MonoBehaviour
 
     public void Loading()
     {
-        if (File.Exists(Application.persistentDataPath + "/SavedFile.dat"))
+        //if (File.Exists(Application.persistentDataPath + "/SaveFile.iggy"))
+        if (File.Exists("./Saved Games/SaveFile.igf"))
         {
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream stream = new FileStream(Application.persistentDataPath + "/SavedFile.dat", FileMode.Open);
+            //FileStream stream = new FileStream(Application.persistentDataPath + "/SaveFile.iggy", FileMode.Open);
+            FileStream stream = new FileStream("./Saved Games/SaveFile.igf", FileMode.Open);
 
             SaveData data = (SaveData)bf.Deserialize(stream);
             stream.Close();
@@ -96,9 +99,11 @@ public class GameManager : MonoBehaviour
 
     public void DeleteSavedFile()
     {
-        if (File.Exists(Application.persistentDataPath + "/SavedFile.dat"))
+        //if (File.Exists(Application.persistentDataPath + "/SaveFile.iggy"))
+        if (File.Exists("./Saved Games/SaveFile.igf"))
         {
-            File.Delete(Application.persistentDataPath + "/SavedFile.dat");
+            //File.Delete(Application.persistentDataPath + "/SaveFile.iggy");
+            File.Delete("./Saved Games/SaveFile.igf");
             print("SaveFile deleted");
             //RESTART GAME
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

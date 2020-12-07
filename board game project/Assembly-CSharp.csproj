@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AttackPanel.cs" />
+     <Compile Include="Assets\Scripts\FightSimulator.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Teritory.cs" />
      <Compile Include="Assets\Scripts\TeritoryHandler.cs" />
